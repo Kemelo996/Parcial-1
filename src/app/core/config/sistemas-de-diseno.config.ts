@@ -1,5 +1,6 @@
 import { SistemaDeDisenoInterface } from '../../modules/sistemas-de-diseno/interfaces/sistema-de-diseno.interface';
 
+/** Contenido educativo que presenta el módulo de sistemas de diseño. */
 export const SISTEMAS_DE_DISENO: SistemaDeDisenoInterface = {
   docente: 'Jesus David Mejia',
   concepto: {

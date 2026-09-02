@@ -5,7 +5,7 @@ import { SistemasDeDisenoRoutingModule } from './sistemas-de-diseno-routing-modu
 import { TableSistemasDeDisenoComponent } from './components/table-sistemas-de-diseno.component/table-sistemas-de-diseno.component';
 import { ListSistemasDeDisenoComponent } from './pages/list-sistemas-de-diseno/list-sistemas-de-diseno.component';
 
-
+/** Módulo que agrupa la navegación y componentes de sistemas de diseño. */
 @NgModule({
   declarations: [
     TableSistemasDeDisenoComponent,

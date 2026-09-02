@@ -24,5 +24,6 @@ import { SistemaDeDisenoInterface } from '../../interfaces/sistema-de-diseno.int
   templateUrl: './table-sistemas-de-diseno.component.html',
 })
 export class TableSistemasDeDisenoComponent {
+  /** Información que se muestra en las secciones del módulo. */
   sistemaDeDiseno: SistemaDeDisenoInterface = SISTEMAS_DE_DISENO;
 }
