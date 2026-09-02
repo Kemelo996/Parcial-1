@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PrincipioArquitectura } from '../../interfaces/principio.interface';
 
 /**
  * Presenta la tabla de principios dentro de la página del listado.
@@ -13,4 +14,6 @@ import { Component } from '@angular/core';
   styleUrl: './table-principios.scss',
 })
 export class TablePrincipios {
+  /** Principios que se muestran en las filas de la tabla. */
+  @Input() principios: PrincipioArquitectura[] = [];
 }

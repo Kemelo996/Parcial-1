@@ -1,1 +1,30 @@
-<p>table-principios works!</p>
+<table>
+	<thead>
+		<tr>
+			<th>Principio</th>
+			<th>Objetivo</th>
+			<th>Descripción</th>
+			<th>Beneficios</th>
+			<th>Ejemplo correcto</th>
+			<th>Ejemplo incorrecto</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (principio of principios; track principio.nombre) {
+			<tr>
+				<th scope="row">{{ principio.nombre }}</th>
+				<td>{{ principio.objetivo }}</td>
+				<td>{{ principio.descripcion }}</td>
+				<td>
+					<ul>
+						@for (beneficio of principio.beneficios; track beneficio) {
+							<li>{{ beneficio }}</li>
+						}
+					</ul>
+				</td>
+				<td>{{ principio.ejemploCorrecto || 'No disponible' }}</td>
+				<td>{{ principio.ejemploIncorrecto || 'No disponible' }}</td>
+			</tr>
+		}
+	</tbody>
+</table>

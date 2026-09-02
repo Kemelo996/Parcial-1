@@ -1,1 +1,36 @@
-<app-table-principios></app-table-principios>
+<main class="principios-page">
+	<header>
+		<p class="eyebrow">Docente: {{ principiosData.docente }}</p>
+		<h1>{{ principiosData.introduccion.titulo }}</h1>
+		<p>{{ principiosData.introduccion.concepto }}</p>
+	</header>
+
+	<section aria-labelledby="principios-title">
+		<h2 id="principios-title">Principios de arquitectura</h2>
+		<app-table-principios [principios]="principiosData.principios"></app-table-principios>
+	</section>
+
+	<section aria-labelledby="clasificacion-title">
+		<h2 id="clasificacion-title">Clasificación de módulos</h2>
+		@for (ejercicio of principiosData.ejerciciosPracticos.clasificacionModulos; track ejercicio.modulo) {
+			<article>
+				<h3>{{ ejercicio.modulo }}</h3>
+				<ul>
+					@for (funcionalidad of ejercicio.funcionalidades; track funcionalidad) {
+						<li>{{ funcionalidad }}</li>
+					}
+				</ul>
+			</article>
+		}
+	</section>
+
+	<section aria-labelledby="problemas-title">
+		<h2 id="problemas-title">Análisis de problemas</h2>
+		@for (problema of principiosData.ejerciciosPracticos.analisisProblemas; track problema.id) {
+			<article>
+				<h3>Problema {{ problema.id }}: {{ problema.tipoProblema }}</h3>
+				<p>{{ problema.situacion }}</p>
+			</article>
+		}
+	</section>
+</main>

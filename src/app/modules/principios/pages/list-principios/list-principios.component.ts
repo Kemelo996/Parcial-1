@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PRINCIPIOS_ARQUITECTURA_DATA } from '../../interfaces/principio.interface';
 
 /**
  * Página contenedora del listado de principios.
@@ -13,4 +14,6 @@ import { Component } from '@angular/core';
   styleUrl: './list-principios.component.scss',
 })
 export class ListPrincipiosComponent {
+  /** Contenido didáctico que se presenta en esta página. */
+  principiosData = PRINCIPIOS_ARQUITECTURA_DATA;
 }
