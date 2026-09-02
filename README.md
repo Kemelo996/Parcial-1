@@ -65,6 +65,24 @@ El comando genera un sitio estático con la documentación del proyecto, incluye
 
 ```npm run compodoc```
 
+## 📝 Convención de commits
+
+Los commits deben seguir Conventional Commits para identificar con claridad
+el tipo de cambio y el módulo afectado:
+
+```text
+feat(principios): agrega listado de principios
+fix(products): corrige formato de precios
+docs(users): documenta el servicio de usuarios
+test(principios): agrega pruebas de la tabla
+refactor(shared): reorganiza el navbar
+```
+
+El formato general es `tipo(módulo): descripción breve`. La descripción debe
+estar en presente, ser concreta y no terminar en punto. Los cambios de una
+misma funcionalidad deben agruparse en un commit y los cambios independientes
+deben mantenerse separados.
+
 ## ⚙️ Generación de Archivos con Angular CLI
 A continuación se presentan los comandos más utilizados para generar módulos y componentes.
 
