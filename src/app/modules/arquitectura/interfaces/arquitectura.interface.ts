@@ -4,3 +4,4 @@ export interface ArquitecturaInterface {
   category: string;
   price: number;
 }
+export type ArquitecturaCategory = 'Lacteos' | 'Carnes' | 'Frutas' | 'Verduras';
