@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
-import { DATOS_ARQUITECTURA } from '../../../core/config/arquitectura.config';
-import { ArquitecturaInterface } from '../interfaces/arquitectura.interface';
+import { DATIS_ARQUITECTURA } from '../../../core/config/arquitectura.config';
 
 @Injectable({
     providedIn: 'root',
 })
 export class ArquitecturaService {
-    getAllDatosArquitectura(): Observable<ArquitecturaInterface[]>{
-        return of(DATOS_ARQUITECTURA);
+    getDatosArquitectura(): Observable<typeof DATIS_ARQUITECTURA>{
+        return of(DATIS_ARQUITECTURA);
     }
 }

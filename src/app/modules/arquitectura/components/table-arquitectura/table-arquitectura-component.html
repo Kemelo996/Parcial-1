@@ -1,1 +1,80 @@
-<p>table-arquitectura-component works!</p>
+<main class="container py-4">
+	<header class="border-bottom pb-4 mb-4">
+		<p class="text-uppercase text-primary fw-semibold mb-2">Módulo de arquitectura</p>
+		<h1 class="display-5 fw-bold mb-2">Arquitectura de software</h1>
+		<p class="text-secondary mb-0">Docente: {{ arquitecturaData.docente }}</p>
+	</header>
+
+	<section class="mb-5">
+		<h2 class="h3 mb-3">Parte I: definición, objetivos y atributos de calidad</h2>
+		<p class="lead">{{ arquitecturaData.parte1.concepto }}</p>
+
+		<h3 class="h5 mt-4">Objetivos y propósitos</h3>
+		<div class="row g-3">
+			@for (item of arquitecturaData.parte1.objetivosYPropositos; track item.objetivo) {
+				<div class="col-md-6">
+					<article class="h-100 border rounded p-3">
+						<h4 class="h6">{{ item.objetivo }}</h4>
+						<p class="mb-0 text-secondary">{{ item.detalle }}</p>
+					</article>
+				</div>
+			}
+		</div>
+
+		<h3 class="h5 mt-4">Atributos de calidad</h3>
+		<div class="list-group">
+			@for (atributo of arquitecturaData.parte1.atributosDeCalidad; track atributo.nombre) {
+				<div class="list-group-item">
+					<h4 class="h6 mb-1">{{ atributo.nombre }}</h4>
+					<p class="mb-0 text-secondary">{{ atributo.descripcion }}</p>
+				</div>
+			}
+		</div>
+	</section>
+
+	<section class="mb-5">
+		<h2 class="h3 mb-3">Parte II: negocio, business drivers y modelos</h2>
+		<p>{{ arquitecturaData.parte2.relacionConNegocio }}</p>
+		<h3 class="h5 mt-4">Business drivers</h3>
+		<p class="text-secondary">{{ arquitecturaData.parte2.businessDrivers.concepto }}</p>
+		<div class="row g-3">
+			@for (driver of arquitecturaData.parte2.businessDrivers.tipos; track driver.tipo) {
+				<div class="col-sm-6 col-lg-4">
+					<article class="h-100 border rounded p-3">
+						<h4 class="h6">{{ driver.tipo }}</h4>
+						<p class="mb-0 text-secondary">{{ driver.detalle }}</p>
+					</article>
+				</div>
+			}
+		</div>
+		<h3 class="h5 mt-4">Modelos de negocio</h3>
+		<div class="list-group">
+			@for (modelo of arquitecturaData.parte2.modelosDeNegocio; track modelo.modelo) {
+				<div class="list-group-item">
+					<h4 class="h6 mb-1">{{ modelo.modelo }}</h4>
+					<p class="mb-0 text-secondary">{{ modelo.detalle }}</p>
+				</div>
+			}
+		</div>
+	</section>
+
+	<section>
+		<h2 class="h3 mb-3">Parte III: rol del arquitecto y decisiones arquitectónicas</h2>
+		<p>{{ arquitecturaData.parte3.rolArquitecto.definicion }}</p>
+		<h3 class="h5 mt-4">Responsabilidades</h3>
+		<ul>
+			@for (responsabilidad of arquitecturaData.parte3.rolArquitecto.responsabilidades; track responsabilidad) {
+				<li class="mb-2">{{ responsabilidad }}</li>
+			}
+		</ul>
+		<h3 class="h5 mt-4">Proceso de decisión arquitectónica</h3>
+		<div class="list-group">
+			@for (paso of arquitecturaData.parte3.procesoDecisionArquitectonica; track paso.paso) {
+				<div class="list-group-item">
+					<h4 class="h6 mb-1">{{ paso.paso }}</h4>
+					<p class="mb-0 text-secondary">{{ paso.detalle }}</p>
+				</div>
+			}
+		</div>
+	</section>
+</main>

@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArquitecturaComponent } from './arquitectura.component';
+import { ListArquitecturaComponent } from './pages/list-arquitectura/list-arquitectura.component';
 
 const routes: Routes = [
   {
-    path: 'arquitectura',
-    component: ArquitecturaComponent
+    path: '',
+    component: ArquitecturaComponent,
+    children: [
+      {
+        path: '',
+        component: ListArquitecturaComponent
+      }
+    ]
   },
   {
     path: '**',

@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { ArquitecturaCategory, ArquitecturaInterface } from '../../interfaces/arquitectura.interface';
-import { BadgeType } from '../../../shared/interfaces/badge.interface';
+import { Component } from '@angular/core';
+import { DATIS_ARQUITECTURA } from '../../../../core/config/arquitectura.config';
 
 @Component({
   selector: 'app-table-arquitectura',
@@ -8,11 +7,5 @@ import { BadgeType } from '../../../shared/interfaces/badge.interface';
   templateUrl: './table-arquitectura-component.html',
 })
 export class TableArquitecturaComponent {
-  @Input() arquitectura: ArquitecturaInterface[] = [];
-  categoryMap: Record<ArquitecturaCategory, BadgeType> = {
-    'Carnes' : 'danger',
-    'Frutas': 'warning',
-    'Lacteos': 'primary',
-    'Verduras': 'success',
-  }
+  arquitecturaData = DATIS_ARQUITECTURA;
 }
