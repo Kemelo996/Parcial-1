@@ -5,6 +5,7 @@ import { ArquitecturaRoutingModule } from './arquitectura-routing-module';
 import { ArquitecturaComponent } from './arquitectura.component';
 import { ListArquitecturaComponent } from './pages/list-arquitectura/list-arquitectura.component';
 import { TableArquitecturaComponent } from './components/table-arquitectura/table-arquitectura-component';
+import { SharedModule } from '../shared/shared-module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { TableArquitecturaComponent } from './components/table-arquitectura/tabl
   ],
   imports: [
     CommonModule,
-    ArquitecturaRoutingModule
+    ArquitecturaRoutingModule,
+    SharedModule
   ]
 })
 export class ArquitecturaModule { }

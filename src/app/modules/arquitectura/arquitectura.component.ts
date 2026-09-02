@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-arquitectura.component',
   standalone: false,
-  styleUrl: './arquitectura.component.scss',
-  templateUrl: './arquitectura.component.html',
+  templateUrl: '<router-outlet></router-outlet>',
 })
 export class ArquitecturaComponent {
 }

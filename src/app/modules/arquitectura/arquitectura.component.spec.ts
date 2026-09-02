@@ -16,7 +16,7 @@ describe('ArquitecturaComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Deberia crear el componente', () => {
     expect(component).toBeTruthy();
   });
 });
