@@ -6,17 +6,11 @@ import { ListArquitecturaComponent } from './pages/list-arquitectura/list-arquit
 const routes: Routes = [
   {
     path: '',
-    component: ArquitecturaComponent,
-    children: [
-      {
-        path: '',
-        component: ListArquitecturaComponent
-      }
-    ]
+    component: ListArquitecturaComponent,
   },
   {
     path: '**',
-    redirectTo: 'arquitectura'
+    redirectTo: 'arquitectura',
   }
 ];
 

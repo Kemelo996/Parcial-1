@@ -1,14 +1,54 @@
-/** Representa un registro de arquitectura con datos identificables y de clasificación. */
-export interface ArquitecturaInterface {
-  /** Identificador numérico del registro. */
-  id: number;
-  /** Nombre visible del registro. */
-  name: string;
-  /** Categoría a la que pertenece el registro. */
-  category: string;
-  /** Valor numérico asociado al registro. */
-  price: number;
+export interface ObjetivoProposito {
+  objetivo: string;
+  detalle: string;
 }
 
-/** Categorías disponibles para clasificar un registro de arquitectura. */
-export type ArquitecturaCategory = 'Lacteos' | 'Carnes' | 'Frutas' | 'Verduras';
+export interface AtributoCalidad {
+  nombre: string;
+  descripcion: string;
+}
+
+export interface DriverTipo {
+  tipo: string;
+  detalle: string;
+}
+
+export interface ModeloNegocio {
+  modelo: string;
+  detalle: string;
+}
+
+export interface PasoDecision {
+  paso: string;
+  detalle: string;
+}
+
+export interface Parte1 {
+  concepto: string;
+  objetivosYPropositos: ObjetivoProposito[];
+  atributosDeCalidad: AtributoCalidad[];
+}
+
+export interface Parte2 {
+  relacionConNegocio: string;
+  businessDrivers: {
+    concepto: string;
+    tipos: DriverTipo[];
+  };
+  modelosDeNegocio: ModeloNegocio[];
+}
+
+export interface Parte3 {
+  rolArquitecto: {
+    definicion: string;
+    responsabilidades: string[];
+  };
+  procesoDecisionArquitectonica: PasoDecision[];
+}
+
+export interface ArquitecturaInterface {
+  docente: string;
+  parte1: Parte1;
+  parte2: Parte2;
+  parte3: Parte3;
+}

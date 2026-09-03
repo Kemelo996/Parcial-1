@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
-import { DATIS_ARQUITECTURA } from '../../../core/config/arquitectura.config';
+import { DATOS_ARQUITECTURA } from '../../../core/config/arquitectura.config';
+import { ArquitecturaInterface } from '../interfaces/arquitectura.interface';
 
 /** Servicio que proporciona el contenido informativo de arquitectura. */
 @Injectable({
@@ -11,9 +12,9 @@ export class ArquitecturaService {
     /**
      * Devuelve el contenido completo de arquitectura como un observable.
      *
-     * @returns Observable que emite una vez el objeto `DATIS_ARQUITECTURA`.
+     * @returns Observable que emite una vez el objeto `DATOS_ARQUITECTURA`.
      */
-    getDatosArquitectura(): Observable<typeof DATIS_ARQUITECTURA>{
-        return of(DATIS_ARQUITECTURA);
+    getDatosArquitectura(): Observable<ArquitecturaInterface>{
+        return of(DATOS_ARQUITECTURA);
     }
 }

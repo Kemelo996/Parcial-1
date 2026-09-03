@@ -13,7 +13,7 @@
 		<div class="row g-3">
 			@for (item of arquitecturaData.parte1.objetivosYPropositos; track item.objetivo) {
 				<div class="col-md-6">
-					<article class="h-100 border rounded p-3">
+					<article class="subtheme-card h-100">
 						<h4 class="h6">{{ item.objetivo }}</h4>
 						<p class="mb-0 text-secondary">{{ item.detalle }}</p>
 					</article>
@@ -22,9 +22,9 @@
 		</div>
 
 		<h3 class="h5 mt-4">Atributos de calidad</h3>
-		<div class="list-group">
+		<div class="list-group subtheme-list">
 			@for (atributo of arquitecturaData.parte1.atributosDeCalidad; track atributo.nombre) {
-				<div class="list-group-item">
+				<div class="list-group-item subtheme-item">
 					<h4 class="h6 mb-1">{{ atributo.nombre }}</h4>
 					<p class="mb-0 text-secondary">{{ atributo.descripcion }}</p>
 				</div>
@@ -40,7 +40,7 @@
 		<div class="row g-3">
 			@for (driver of arquitecturaData.parte2.businessDrivers.tipos; track driver.tipo) {
 				<div class="col-sm-6 col-lg-4">
-					<article class="h-100 border rounded p-3">
+					<article class="subtheme-card h-100">
 						<h4 class="h6">{{ driver.tipo }}</h4>
 						<p class="mb-0 text-secondary">{{ driver.detalle }}</p>
 					</article>
@@ -48,9 +48,9 @@
 			}
 		</div>
 		<h3 class="h5 mt-4">Modelos de negocio</h3>
-		<div class="list-group">
+		<div class="list-group subtheme-list">
 			@for (modelo of arquitecturaData.parte2.modelosDeNegocio; track modelo.modelo) {
-				<div class="list-group-item">
+				<div class="list-group-item subtheme-item">
 					<h4 class="h6 mb-1">{{ modelo.modelo }}</h4>
 					<p class="mb-0 text-secondary">{{ modelo.detalle }}</p>
 				</div>
@@ -68,9 +68,9 @@
 			}
 		</ul>
 		<h3 class="h5 mt-4">Proceso de decisión arquitectónica</h3>
-		<div class="list-group">
+		<div class="list-group subtheme-list">
 			@for (paso of arquitecturaData.parte3.procesoDecisionArquitectonica; track paso.paso) {
-				<div class="list-group-item">
+				<div class="list-group-item subtheme-item">
 					<h4 class="h6 mb-1">{{ paso.paso }}</h4>
 					<p class="mb-0 text-secondary">{{ paso.detalle }}</p>
 				</div>

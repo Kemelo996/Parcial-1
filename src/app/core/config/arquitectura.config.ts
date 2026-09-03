@@ -1,10 +1,12 @@
+import { ArquitecturaInterface } from "../../modules/arquitectura/interfaces/arquitectura.interface";
+
 /**
  * Contenido textual del módulo de arquitectura de software.
  *
  * Agrupa la información académica en tres partes: fundamentos y calidad,
  * relación con el negocio, y rol del arquitecto y toma de decisiones.
  */
-export const DATIS_ARQUITECTURA = {
+export const DATOS_ARQUITECTURA: ArquitecturaInterface = {
   docente: 'Jesus David Mejia',
   parte1: {
     concepto: 'Conjunto de decisiones estructurales que definen cómo está organizado un sistema y cómo colaboran sus componentes para cumplir objetivos funcionales y no funcionales. Comprende los elementos, sus propiedades visibles externamente y sus relaciones.',
