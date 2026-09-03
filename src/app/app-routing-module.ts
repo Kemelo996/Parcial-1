@@ -3,16 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'users',
-    loadChildren: () => import('./modules/users/users-module').then(m => m.UsersModule)
+    path: 'sistemas-de-diseno',
+    loadChildren: () => import('./modules/sistemas-de-diseno/sistemas-de-diseno-module').then(m => m.SistemasDeDisenoModule)
   },
   {
-    path: 'products',
-    loadChildren: () => import('./modules/products/products-module').then(m => m.ProductsModule)
+    path: 'arquitectura',
+    loadChildren: () => import('./modules/arquitectura/arquitectura-module').then(m => m.ArquitecturaModule)
+  },
+  {
+    path: 'principios',
+    loadChildren: () => import('./modules/principios/principios-module').then(m => m.PrincipiosModule)
   },
   {
     path: '**',
-    redirectTo: 'users'
+    redirectTo: 'arquitectura'
   },
 ];
 

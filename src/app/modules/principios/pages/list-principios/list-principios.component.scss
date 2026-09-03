@@ -1,0 +1,99 @@
+.principios-page {
+	--ink: #17233b;
+	--muted: #65718a;
+	--line: #e5e9f0;
+	--blue: #2463d4;
+	--blue-soft: #edf4ff;
+	--orange: #f59b45;
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 56px 28px 88px;
+	color: var(--ink);
+	font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 48px;
+	min-height: 310px;
+	margin-bottom: 72px;
+	padding: 52px 64px;
+	border-radius: 4px;
+	background: #f1f5fb;
+	background-image: linear-gradient(135deg, rgba(255, 255, 255, .75), rgba(231, 239, 252, .5));
+}
+
+.hero-copy { max-width: 720px; }
+
+.eyebrow,
+.section-kicker,
+.label {
+	margin: 0 0 14px;
+	color: var(--blue);
+	font-size: .76rem;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 {
+	max-width: 680px;
+	margin-bottom: 20px;
+	font-size: clamp(2.1rem, 5vw, 4.25rem);
+	line-height: 1.02;
+	letter-spacing: 0;
+}
+
+.intro {
+	max-width: 670px;
+	margin-bottom: 24px;
+	color: var(--muted);
+	font-size: 1.04rem;
+	line-height: 1.7;
+}
+
+.author { margin-bottom: 0; color: var(--muted); font-size: .92rem; }
+.author strong { color: var(--ink); }
+
+.hero-mark {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: var(--blue);
+	font-size: .8rem;
+	font-weight: 700;
+}
+
+.mark-line { width: 86px; height: 2px; background: var(--orange); }
+
+.section-heading { max-width: 690px; margin-bottom: 30px; }
+.section-heading.compact { margin-bottom: 26px; }
+.section-heading h2 { margin-bottom: 10px; font-size: clamp(1.7rem, 3vw, 2.55rem); line-height: 1.1; }
+.section-heading > p:last-child { margin-bottom: 0; color: var(--muted); line-height: 1.6; }
+.principles-section { margin-bottom: 78px; }
+
+.exercises { padding-top: 12px; }
+.exercise-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.exercise-card { padding: 30px; border: 1px solid var(--line); border-top: 4px solid var(--blue); background: #fff; box-shadow: 0 10px 28px rgba(34, 55, 91, .07); }
+.problems-exercise { border-top-color: var(--orange); }
+.card-number { display: block; margin-bottom: 24px; color: var(--blue); font-size: .78rem; font-weight: 700; }
+.problems-exercise .card-number { color: #c87528; }
+.exercise-card h3 { margin-bottom: 10px; font-size: 1.35rem; }
+.exercise-card > p { min-height: 48px; color: var(--muted); line-height: 1.55; }
+.module-list, .problem-list { margin-top: 25px; border-top: 1px solid var(--line); }
+.module-item, .problem-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.module-item span { color: var(--muted); font-size: .82rem; }
+.problem-item span { display: grid; place-items: center; width: 25px; height: 25px; flex: 0 0 25px; border-radius: 50%; background: #fff1df; color: #c87528; font-size: .75rem; font-weight: 700; }
+.problem-item strong { flex: 1; font-size: .9rem; }
+
+@media (max-width: 700px) {
+	.principios-page { padding: 28px 16px 56px; }
+	.hero { align-items: flex-start; min-height: auto; margin-bottom: 52px; padding: 34px 26px; }
+	.hero-mark { display: none; }
+	.exercise-grid { grid-template-columns: 1fr; }
+	.exercise-card { padding: 24px; }
+}
