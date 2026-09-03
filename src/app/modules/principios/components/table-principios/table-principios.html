@@ -1,30 +1,32 @@
-<table>
-	<thead>
-		<tr>
-			<th>Principio</th>
-			<th>Objetivo</th>
-			<th>Descripción</th>
-			<th>Beneficios</th>
-			<th>Ejemplo correcto</th>
-			<th>Ejemplo incorrecto</th>
-		</tr>
-	</thead>
-	<tbody>
-		@for (principio of principios; track principio.nombre) {
-			<tr>
-				<th scope="row">{{ principio.nombre }}</th>
-				<td>{{ principio.objetivo }}</td>
-				<td>{{ principio.descripcion }}</td>
-				<td>
-					<ul>
-						@for (beneficio of principio.beneficios; track beneficio) {
-							<li>{{ beneficio }}</li>
-						}
-					</ul>
-				</td>
-				<td>{{ principio.ejemploCorrecto || 'No disponible' }}</td>
-				<td>{{ principio.ejemploIncorrecto || 'No disponible' }}</td>
-			</tr>
-		}
-	</tbody>
-</table>
+<div class="principles-grid">
+	@for (principio of principios; track principio.nombre; let index = $index) {
+		<article class="principle-card">
+			<div class="card-topline">
+				<span class="principle-index">0{{ index + 1 }}</span>
+				<span class="goal" [class.low]="principio.objetivo === 'Baja'">Objetivo: {{ principio.objetivo }}</span>
+			</div>
+			<h3>{{ principio.nombre }}</h3>
+			<p class="description">{{ principio.descripcion }}</p>
+			<div class="benefits">
+				<p class="label">Beneficios</p>
+				<ul>
+					@for (beneficio of principio.beneficios; track beneficio) {
+						<li>{{ beneficio }}</li>
+					}
+				</ul>
+			</div>
+			<div class="examples">
+				<div class="example correct">
+					<span>+ Correcto</span>
+					<p>{{ principio.ejemploCorrecto || 'No disponible' }}</p>
+				</div>
+				@if (principio.ejemploIncorrecto) {
+					<div class="example incorrect">
+						<span>- Evitar</span>
+						<p>{{ principio.ejemploIncorrecto }}</p>
+					</div>
+				}
+			</div>
+		</article>
+	}
+</div>
