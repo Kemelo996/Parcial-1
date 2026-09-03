@@ -1,3 +1,9 @@
+/**
+ * Contenido textual del módulo de arquitectura de software.
+ *
+ * Agrupa la información académica en tres partes: fundamentos y calidad,
+ * relación con el negocio, y rol del arquitecto y toma de decisiones.
+ */
 export const DATIS_ARQUITECTURA = {
   docente: 'Jesus David Mejia',
   parte1: {
