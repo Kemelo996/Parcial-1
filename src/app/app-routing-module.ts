@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/arquitectura/arquitectura-module').then(m => m.ArquitecturaModule)
   },
   {
+    path: 'principios',
+    loadChildren: () => import('./modules/principios/principios-module').then(m => m.PrincipiosModule)
+  },
+  {
     path: '**',
     redirectTo: 'arquitectura'
   },

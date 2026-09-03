@@ -1,0 +1,32 @@
+<div class="principles-grid">
+	@for (principio of principios; track principio.nombre; let index = $index) {
+		<article class="principle-card">
+			<div class="card-topline">
+				<span class="principle-index">0{{ index + 1 }}</span>
+				<span class="goal" [class.low]="principio.objetivo === 'Baja'">Objetivo: {{ principio.objetivo }}</span>
+			</div>
+			<h3>{{ principio.nombre }}</h3>
+			<p class="description">{{ principio.descripcion }}</p>
+			<div class="benefits">
+				<p class="label">Beneficios</p>
+				<ul>
+					@for (beneficio of principio.beneficios; track beneficio) {
+						<li>{{ beneficio }}</li>
+					}
+				</ul>
+			</div>
+			<div class="examples">
+				<div class="example correct">
+					<span>+ Correcto</span>
+					<p>{{ principio.ejemploCorrecto || 'No disponible' }}</p>
+				</div>
+				@if (principio.ejemploIncorrecto) {
+					<div class="example incorrect">
+						<span>- Evitar</span>
+						<p>{{ principio.ejemploIncorrecto }}</p>
+					</div>
+				}
+			</div>
+		</article>
+	}
+</div>
