@@ -15,6 +15,5 @@ import { NavbarItem } from "../../modules/shared/interfaces/navbar.interface";
  */
 export const NAVBAR_ITEMS: NavbarItem[] = [
     { label: 'Arquitectura', url: '/arquitectura' },
-    { label: 'Usuarios', url: '/users' },
     { label: 'Principios', url: '/principios' },
 ];
