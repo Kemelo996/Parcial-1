@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DATOS_ARQUITECTURA } from '../../../../core/config/arquitectura.config';
+import { ArquitecturaInterface } from '../../interfaces/arquitectura.interface';
 
 /**
  * Componente que presenta la información de arquitectura de software como
@@ -12,5 +13,5 @@ import { DATOS_ARQUITECTURA } from '../../../../core/config/arquitectura.config'
 })
 export class TableArquitecturaComponent {
   /** Datos académicos que se muestran en la plantilla de lectura. */
-  arquitecturaData = DATOS_ARQUITECTURA;
+  arquitecturaData: ArquitecturaInterface = DATOS_ARQUITECTURA;
 }
