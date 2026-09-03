@@ -7,8 +7,16 @@ const routes: Routes = [
     loadChildren: () => import('./modules/sistemas-de-diseno/sistemas-de-diseno-module').then(m => m.SistemasDeDisenoModule)
   },
   {
+    path: 'arquitectura',
+    loadChildren: () => import('./modules/arquitectura/arquitectura-module').then(m => m.ArquitecturaModule)
+  },
+  {
+    path: 'principios',
+    loadChildren: () => import('./modules/principios/principios-module').then(m => m.PrincipiosModule)
+  },
+  {
     path: '**',
-    redirectTo: 'sistemas-de-diseno'
+    redirectTo: 'arquitectura'
   },
 ];
 

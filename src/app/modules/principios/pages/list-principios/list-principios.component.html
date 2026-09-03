@@ -1,0 +1,60 @@
+<main class="principios-page">
+	<header class="hero">
+		<div class="hero-copy">
+			<p class="eyebrow">Guía de arquitectura de software</p>
+			<h1>{{ principiosData.introduccion.titulo }}</h1>
+			<p class="intro">{{ principiosData.introduccion.concepto }}</p>
+			<p class="author">Preparado por <strong>{{ principiosData.docente }}</strong></p>
+		</div>
+		<div class="hero-mark" aria-hidden="true">
+			<span>01</span>
+			<div class="mark-line"></div>
+			<span>04</span>
+		</div>
+	</header>
+
+	<section class="principles-section" aria-labelledby="principios-title">
+		<div class="section-heading">
+			<p class="section-kicker">Fundamentos</p>
+			<h2 id="principios-title">Cuatro ideas para construir mejor</h2>
+			<p>Decisiones sencillas que mantienen el sistema claro, flexible y preparado para crecer.</p>
+		</div>
+		<app-table-principios [principios]="principiosData.principios"></app-table-principios>
+	</section>
+
+	<section class="exercises" aria-labelledby="ejercicios-title">
+		<div class="section-heading compact">
+			<p class="section-kicker">Aplicación</p>
+			<h2 id="ejercicios-title">Ejercicios prácticos</h2>
+		</div>
+		<div class="exercise-grid">
+			<article class="exercise-card modules-exercise">
+				<span class="card-number">01</span>
+				<h3>Clasificación de módulos</h3>
+				<p>Relaciona cada módulo con las funcionalidades que le corresponden.</p>
+				<div class="module-list">
+					@for (ejercicio of principiosData.ejerciciosPracticos.clasificacionModulos; track ejercicio.modulo) {
+						<div class="module-item">
+							<strong>{{ ejercicio.modulo }}</strong>
+							<span>{{ ejercicio.funcionalidades.length }} funcionalidades</span>
+						</div>
+					}
+				</div>
+			</article>
+
+			<article class="exercise-card problems-exercise">
+				<span class="card-number">02</span>
+				<h3>Análisis de problemas</h3>
+				<p>Identifica el principio que se está incumpliendo en cada situación.</p>
+				<div class="problem-list">
+					@for (problema of principiosData.ejerciciosPracticos.analisisProblemas; track problema.id) {
+						<div class="problem-item">
+							<span>{{ problema.id }}</span>
+							<strong>{{ problema.tipoProblema }}</strong>
+						</div>
+					}
+				</div>
+			</article>
+		</div>
+	</section>
+</main>
